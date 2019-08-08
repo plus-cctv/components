@@ -2,7 +2,7 @@
 /**
  * Comments list.
  *
- * @package Bootswatch
+ * @package Plus
  */
 
 ?>
@@ -10,7 +10,7 @@
 	<?php
 		wp_list_comments( [
 			'style' => 'div',
-			'walker' => new Walker_Comment_Bootswatch(),
+			'walker' => new Walker_Comment_plus(),
 			'short_ping' => true,
 		] );
 	?>
