@@ -2,10 +2,10 @@
 /**
  * The primary menu.
  *
- * @package Bootswatch
+ * @package plus
  */
 
-if ( ! function_exists( 'bootswatch_header_menu_title_cb' ) ) {
+if ( ! function_exists( 'plus_header_menu_title_cb' ) ) {
 	/**
 	 * Adds caret to top level element with children in the primary menu location.
 	 *
@@ -15,7 +15,7 @@ if ( ! function_exists( 'bootswatch_header_menu_title_cb' ) ) {
 	 * @param  int      $depth Depth of menu item. Used for padding.
 	 * @return String   The filtered menu item title.
 	 */
-	function bootswatch_header_menu_title_cb( $title, $item, $args, $depth ) {
+	function plus_header_menu_title_cb( $title, $item, $args, $depth ) {
 		return 0 === $depth && in_array( 'menu-item-has-children', $item->classes )
 			? $title . ' <span class="caret"></span>'
 			: $title
@@ -26,7 +26,7 @@ if ( ! function_exists( 'bootswatch_header_menu_title_cb' ) ) {
 /**
  * Hook callback.
  */
-add_filter( 'nav_menu_item_title', 'bootswatch_header_menu_title_cb', 10, 4 );
+add_filter( 'nav_menu_item_title', 'plus_header_menu_title_cb', 10, 4 );
 
 /**
  * Display primary menu.
@@ -34,8 +34,8 @@ add_filter( 'nav_menu_item_title', 'bootswatch_header_menu_title_cb', 10, 4 );
 wp_nav_menu( array(
 	'theme_location' => 'primary',
 	'container' => false,
-	'menu_class' => 'nav navbar-nav' . ( ! bootswatch_has( 'search_form_in_header' ) ? ' navbar-right' : '' ),
-	'walker' => new Bootswatch_Nav_Walker,
+	'menu_class' => 'nav navbar-nav' . ( ! plus_has( 'search_form_in_header' ) ? ' navbar-right' : '' ),
+	'walker' => new Plus_Nav_Walker,
 	'fallback_cb' => false,
 	'depth' => 2,
 ) );
@@ -43,4 +43,4 @@ wp_nav_menu( array(
 /**
  * Hook callback so it doesn't run for other elements in the page.
  */
-remove_filter( 'nav_menu_item_title', 'bootswatch_header_menu_title_cb' );
+remove_filter( 'nav_menu_item_title', 'plus_header_menu_title_cb' );
