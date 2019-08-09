@@ -2,7 +2,7 @@
 /**
  * Snippet.
  *
- * @package Bootswatch
+ * @package plus
  */
 
 ?>
