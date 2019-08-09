@@ -2,16 +2,16 @@
 /**
  * The header.
  *
- * @package Bootswatch
+ * @package plus
  */
 
 ?>
 
 <header class="header" role="banner">
 
-	<a class="screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'bootswatch' ); ?></a>
+	<a class="screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'plus' ); ?></a>
 
-	<nav class=" navbar navbar-default <?php echo bootswatch_has( 'fixed_navbar' ) ? 'navbar-fixed-top' : 'navbar-static-top'; ?> " role="navigation">
+	<nav class=" navbar navbar-default <?php echo plus_has( 'fixed_navbar' ) ? 'navbar-fixed-top' : 'navbar-static-top'; ?> " role="navigation">
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".collapse">
@@ -29,8 +29,8 @@
 				<?php if ( is_home() ) { ?></h1><?php } ?>
 			</div>
 			<div class="collapse navbar-collapse">
-				<?php bootswatch_get_template_part( 'template-parts/components/header', 'menu' ); ?>
-				<?php bootswatch_get_template_part( 'template-parts/components/header', 'search-form' ); ?>
+				<?php plus_get_template_part( 'template-parts/components/header', 'menu' ); ?>
+				<?php plus_get_template_part( 'template-parts/components/header', 'search-form' ); ?>
 			</div>
 		</div>
 	</nav>
