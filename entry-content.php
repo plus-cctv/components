@@ -2,7 +2,7 @@
 /**
  * Snippet.
  *
- * @package Bootswatch
+ * @package Plus
  */
 
 /**
@@ -18,9 +18,9 @@ if ( ! is_singular() && ! post_password_required() ) {
  * Determine featured image size.
  */
 if ( $use_short ) {
-	$featured_image_size = apply_filters( 'bootswatch_thumbnail_size_short', 'thumbnail' );
+	$featured_image_size = apply_filters( 'plus_thumbnail_size_short', 'thumbnail' );
 } else {
-	$featured_image_size = apply_filters( 'bootswatch_thumbnail_size', 'full' );
+	$featured_image_size = apply_filters( 'plus_thumbnail_size', 'full' );
 }
 
 ?>
@@ -34,7 +34,7 @@ if ( $use_short ) {
 			} else {
 				the_content( sprintf(
 					/* translators: %s: Post title. */
-					apply_filters( 'bootswatch_read_more_text', esc_html__( 'Continue reading %s &rarr;', 'bootswatch' ) ),
+					apply_filters( 'plus_read_more_text', esc_html__( 'Continue reading %s &rarr;', 'plus' ) ),
 					the_title( '<span class="screen-reader-text">"', '"</span>', false )
 				) );
 			}
@@ -42,5 +42,5 @@ if ( $use_short ) {
 			the_content();
 		}
 	?>
-	<?php bootswatch_link_pages(); ?>
+	<?php plus_link_pages(); ?>
 </div><!-- .entry-content -->
