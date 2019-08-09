@@ -2,7 +2,7 @@
 /**
  * Snippet.
  *
- * @package Bootswatch
+ * @package Plus
  */
 
 /**
@@ -18,6 +18,6 @@ if ( is_singular() ) {
 ?>
 
 <header class="entry-header<?php echo $use_page_header_class ? ' page-header' : ''; ?>">
-	<?php bootswatch_get_template_part( 'template-parts/components/entry', 'title' ); ?>
-	<?php bootswatch_get_template_part( 'template-parts/components/entry', 'meta' ); ?>
+	<?php plus_get_template_part( 'template-parts/components/entry', 'title' ); ?>
+	<?php plus_get_template_part( 'template-parts/components/entry', 'meta' ); ?>
 </header>
