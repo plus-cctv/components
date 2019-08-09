@@ -2,13 +2,13 @@
 /**
  * The footer.
  *
- * @package Bootswatch
+ * @package Plus
  */
 
 $author = [
-	'name'  => __( 'Nabil Kadimi', 'bootswatch' ),
-	'title' => __( 'Independent WordPress Developer', 'bootswatch' ),
-	'url'   => 'https://kadimi.com',
+	'name'  => __( 'Plus! Team', 'Plus' ),
+	'title' => __( 'Independent WordPress Developer', 'plus' ),
+	'url'   => 'https://plus-cctv.com',
 ];
 
 ?>
@@ -27,11 +27,11 @@ $author = [
 				&copy; <?php echo esc_html( date( 'Y' ) ); ?>
 				<span class="site-title"><?php echo esc_html( get_bloginfo( 'title' ) ); ?></span>
 				<?php
-				if ( apply_filters( 'bootswatch_show_theme_author', true ) ) {
+				if ( apply_filters( 'plus_show_theme_author', true ) ) {
 					echo '&ndash; ';
 					// Translators: Author details.
 					printf(
-						esc_html( 'Designed by %s.', 'bootswatch' )
+						esc_html( 'Designed by %s.', 'plus' )
 						, sprintf( '<a href="%1$s" title="%2$s">%3$s</a>'
 							, esc_url( $author['url'] )
 							, esc_html( $author['title'] )
